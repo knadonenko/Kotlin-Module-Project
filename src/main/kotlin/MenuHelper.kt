@@ -13,6 +13,6 @@ class MenuHelper {
         if (value.all { char -> !char.isDigit() })
             return -1
 
-        return if (value.toInt() in 0..maxChoice) value.toInt() else -1
+        return if (value.toIntOrNull() in 0..maxChoice) value.toInt() else -1
     }
 }
